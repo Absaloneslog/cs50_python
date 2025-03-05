@@ -1,17 +1,29 @@
 def main():
     print("x operator z")
-    x,y,z =input().split(" ")
-    approval_value=check_in(x,y,z)
-    match approval_value:
-        case "No 1": 
-            print("x has to be an integer")
-        case "No 2":
-            print("z has to be an integer")
-        case "No 3":
-            print("You can't get divided by 0")
-        case "Yes":
-            value=calculator(x,y,z)
-            print(f"{value:.1f}")
+    user_input=input().lstrip().rstrip()
+    if user_input.count(" ")!=2:
+        print("Try again in this format x + z")
+        main()
+    else:
+        x,y,z=user_input.split(" ")
+        approval_value=check_in(x,y,z)
+        match approval_value:
+            case "No 1": 
+                print("x has to be an integer")
+                main()
+            case "No 2":
+                print("z has to be an integer")
+                main()
+            case "No 3":
+                print("You can't get divided by 0")
+                main()
+            case "Yes":
+                value=calculator(x,y,z)
+                if value=="No":
+                    print(f"There must be an operator")
+                    main()
+                else:
+                    print(f"{value:.1f}")
 
 def check_in(x,y,z):
     x=x.strip("-")
@@ -38,6 +50,6 @@ def calculator(x,y,z):
     elif y == "/":
         return x / z
     else:
-        return "Try again in this format x + z"
+        return "No"
 main()
 
