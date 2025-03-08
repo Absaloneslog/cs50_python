@@ -19,7 +19,7 @@ def main():
                 main()
             case "Yes":
                 value=calculator(x,y,z)
-                if value=="No":
+                if value=="operator":
                     print(f"There must be an operator")
                     main()
                 else:
@@ -50,6 +50,6 @@ def calculator(x,y,z):
     elif y == "/":
         return x / z
     else:
-        return "No"
+        return "operator"
 main()
 
