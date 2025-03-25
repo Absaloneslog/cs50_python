@@ -39,12 +39,14 @@
 #        print("Hello,", to.capitalize())
 #main()
 #--------------------------------------------------------------------
-def main(input):
-    for hello in input:
-        return "hello, there."
-    else:
-        return"what do you mean?"
+#def main(input):
+#    for hello in input:
+#        return "hello, there."
+#    else:
+#        return"what do you mean?"
 
-greeting = main("hello, computer")
+#greeting = main("hello, computer")
 
-print("Hmm... "+ greeting)
+#print("Hmm... "+ greeting)
+dedo="SUPER".lower()
+print(f"{dedo}")

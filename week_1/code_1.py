@@ -4,8 +4,9 @@
 #print(f"{a}")
 
 hello=input("").strip()
-hello=hello.replace(" ", "")
-answer=hello.strip(" p.m.")
-print(f"{answer}2")
+#answer="..."
+#print(f"{answer}2")
 #x=float(hello)
-
+#print(answer.join(hello))
+lowback=hello.replace(" ", "...")
+print(f"{lowback}")

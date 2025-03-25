@@ -36,7 +36,6 @@ def check_in(x,y,z):
         return "No 3"
     else:
         return "Yes"
-        
 
 def calculator(x,y,z):
     x=float(x)
